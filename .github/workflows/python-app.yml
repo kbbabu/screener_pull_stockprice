@@ -5,14 +5,14 @@ name: On Push Run
 on: push
 
 env:
-  testing_github_action_DIR: screener_pull_stockprice
+  screener_pull_stockprice_DIR: screener_pull_stockprice
 
 jobs:
   Stock-Price:
     name: Stock Info
     runs-on: ubuntu-latest
     steps:
-    - name: Check-out devops repository
+    - name: Check-out repository
       uses: actions/checkout@v2
       with:
         repository: kbbabu/screener_pull_stockprice
