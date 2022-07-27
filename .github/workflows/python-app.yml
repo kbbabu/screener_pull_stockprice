@@ -18,8 +18,9 @@ jobs:
         repository: kbbabu/screener_pull_stockprice
         token: ${{ secrets.GITHUB_TOKEN }}
         path: ${{ env.screener_pull_stockprice_DIR }}
-        Requirement_path: ${{ env.screener_pull_stockprice_DIR }}/requirements.txt 
+        run: pip install -r requirements.txt 
 
     - name: Nifty 50 stock information
       run: python ${{ env.screener_pull_stockprice_DIR }}/nifty_50_data.py
+      
       shell: sh
