@@ -22,7 +22,7 @@ jobs:
     - name: install python packages
       run: |
         python -m pip install --upgrade pip
-        pip install ${{ env.screener_pull_stockprice_DIR }}/requirements.txt
+        pip install -r requirements.txt
 
     - name: Nifty 50 stock information
       run: python ${{ env.screener_pull_stockprice_DIR }}/nifty_50_data.py
