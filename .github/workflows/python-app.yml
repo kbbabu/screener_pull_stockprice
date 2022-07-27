@@ -4,9 +4,6 @@ name: On Push Run
 
 on: push
 
-env:
-  screener_pull_stockprice_DIR: screener_pull_stockprice
-
 jobs:
   Stock-Price:
     name: Stock Info
@@ -25,9 +22,13 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
       
-    - name: execute py script # run main.py
+    - name: execute py script # nifty_50_data.py
       env:
         SOME_SECRET: ${{ secrets.SOME_SECRET }}
         run: python nifty_50_data.py
-              
-      shell: sh
+    
+    - name: push changes
+      uses: ad-m/github-push-action@v0.6.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: main           
