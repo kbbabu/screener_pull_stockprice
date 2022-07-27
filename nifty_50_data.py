@@ -1,4 +1,8 @@
 import requests
+import logging
+import logging.handlers
+import os
+
 page = requests.get('https://www.screener.in/company/WIPRO/consolidated/')
 from bs4 import BeautifulSoup
 soup = BeautifulSoup(page.content,'html.parser')
@@ -45,3 +49,16 @@ for i in top_stocks:
 
 label = ['Name','Price','MCap','High_52week','Low_52week','PE','Bookvalue','Div_yield%','ROCE%','ROE%','Facevalue']
 print(pd.DataFrame(nifty_50, columns = label))
+
+
+try:
+    SOME_SECRET = os.environ["SOME_SECRET"]
+except KeyError:
+    SOME_SECRET = "Token not available!"
+    #logger.info("Token not available!")
+    #raise
+
+
+if __name__ == "__main__":
+    logger.info(f"Token value: {SOME_SECRET}")
+
