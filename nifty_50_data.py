@@ -51,12 +51,12 @@ label = ['Name','Price','MCap','High_52week','Low_52week','PE','Bookvalue','Div_
 print(pd.DataFrame(nifty_50, columns = label))
 
 
-try:
-    SOME_SECRET = os.environ["SOME_SECRET"]
-except KeyError:
-    SOME_SECRET = "Token not available!"
-    #logger.info("Token not available!")
-    #raise
+#try:
+#    SOME_SECRET = os.environ["SOME_SECRET"]
+#except KeyError:
+#    SOME_SECRET = "Token not available!"
+#    #logger.info("Token not available!")
+#    #raise
 
 
 if __name__ == "__main__":
