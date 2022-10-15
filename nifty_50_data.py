@@ -48,7 +48,7 @@ for i in top_stocks:
     pass
 
 label = ['Name','Price','MCap','High_52week','Low_52week','PE','Bookvalue','Div_yield%','ROCE%','ROE%','Facevalue']
-print(pd.DataFrame(nifty_50, columns = label))
+#print(pd.DataFrame(nifty_50, columns = label))
 
 
 #try:
@@ -60,6 +60,6 @@ print(pd.DataFrame(nifty_50, columns = label))
 
 
 if __name__ == "__main__":
-   print("Hello world - test for github action")
+   print(pd.DataFrame(nifty_50, columns = label))
     #logger.info(f"Token value: {SOME_SECRET}")
 
