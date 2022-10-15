@@ -60,5 +60,6 @@ print(pd.DataFrame(nifty_50, columns = label))
 
 
 if __name__ == "__main__":
-    logger.info(f"Token value: {SOME_SECRET}")
+   print("Hello world - test for github action")
+    #logger.info(f"Token value: {SOME_SECRET}")
 
