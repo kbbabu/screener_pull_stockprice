@@ -34,7 +34,7 @@ jobs:
       run: |
         python nifty_50_data.py
      
-    - name: push changes
-      uses: ad-m/github-push-action@v0.6.0
-      with:
-        branch: main     
+    #- name: push changes
+    #  uses: ad-m/github-push-action@v0.6.0
+    #  with:
+    #    branch: main     
