@@ -5,9 +5,9 @@ name: run nifty_50_data.py
 
 on:
   schedule:
-    - cron: '6 * * * *'
-  push: 
-   branches: [ "main" ]
+    - cron: '5 * * * *'
+  #push: 
+   #branches: [ "main" ]
   #pull_request:
   #  branches: [ "main" ]
 
@@ -34,7 +34,9 @@ jobs:
       run: |
         python nifty_50_data.py
      
-    #- name: push changes
-    #  uses: ad-m/github-push-action@v0.6.0
-    #  with:
-    #    branch: main     
+    - name: push changes
+      uses: ad-m/github-push-action@v0.6.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: main
+    
