@@ -64,5 +64,5 @@ except KeyError:
 
 if __name__ == "__main__":
    print(pd.DataFrame(nifty_50, columns = label))
-    #logger.info(f"Token value: {SOME_SECRET}")
+   print(f"Token value: {SOME_SECRET}")
 
