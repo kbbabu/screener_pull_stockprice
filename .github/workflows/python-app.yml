@@ -5,8 +5,8 @@ name: run nifty_50_data.py
 
 on:
   push:
-  #schedule:
-  #  - cron: '5 * * * *'
+  schedule:
+    - cron: '5 * * * *'
   #push: 
    #branches: [ "main" ]
   #pull_request:
